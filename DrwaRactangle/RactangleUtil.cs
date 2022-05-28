@@ -27,7 +27,7 @@ namespace DrwaRactangle
                     BlockTable bt = trans.GetObject(db.BlockTableId, OpenMode.ForRead) as BlockTable;
                     BlockTableRecord btr = trans.GetObject(bt[BlockTableRecord.ModelSpace],OpenMode.ForWrite) as BlockTableRecord;
 
-                    //Convertthe insertionPoint to point2d
+                    //Convert the insertionPoint to point2d
                     Point2d insPt2d = new Point2d(insPt.X,insPt.Y);
 
                     //Derive the upperleft corner based on the Insention Ponit
