@@ -30,7 +30,7 @@ namespace DrwaRactangle
         private void InitializeComponent()
         {
             this.gbRactangleForm = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gdCoordinates = new System.Windows.Forms.GroupBox();
             this.txtYcoord = new System.Windows.Forms.TextBox();
             this.txtXCoord = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,47 +40,47 @@ namespace DrwaRactangle
             this.rbCooordinates = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtheight = new System.Windows.Forms.TextBox();
-            this.txtwidht = new System.Windows.Forms.TextBox();
+            this.txtwidth = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRanctangle = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
             this.gbRactangleForm.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gdCoordinates.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbRactangleForm
             // 
             this.gbRactangleForm.Controls.Add(this.lblInfo);
             this.gbRactangleForm.Controls.Add(this.btnRanctangle);
-            this.gbRactangleForm.Controls.Add(this.groupBox1);
+            this.gbRactangleForm.Controls.Add(this.gdCoordinates);
             this.gbRactangleForm.Controls.Add(this.rbPickOnScreen);
             this.gbRactangleForm.Controls.Add(this.rbCooordinates);
             this.gbRactangleForm.Controls.Add(this.label3);
             this.gbRactangleForm.Controls.Add(this.txtheight);
-            this.gbRactangleForm.Controls.Add(this.txtwidht);
+            this.gbRactangleForm.Controls.Add(this.txtwidth);
             this.gbRactangleForm.Controls.Add(this.label2);
             this.gbRactangleForm.Controls.Add(this.label1);
             this.gbRactangleForm.Location = new System.Drawing.Point(12, 12);
             this.gbRactangleForm.Name = "gbRactangleForm";
-            this.gbRactangleForm.Size = new System.Drawing.Size(302, 386);
+            this.gbRactangleForm.Size = new System.Drawing.Size(302, 330);
             this.gbRactangleForm.TabIndex = 0;
             this.gbRactangleForm.TabStop = false;
             this.gbRactangleForm.Text = "Enter Ractangle Parameters";
             // 
-            // groupBox1
+            // gdCoordinates
             // 
-            this.groupBox1.Controls.Add(this.txtYcoord);
-            this.groupBox1.Controls.Add(this.txtXCoord);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(12, 177);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 90);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Enter Coordinates";
+            this.gdCoordinates.Controls.Add(this.txtYcoord);
+            this.gdCoordinates.Controls.Add(this.txtXCoord);
+            this.gdCoordinates.Controls.Add(this.label6);
+            this.gdCoordinates.Controls.Add(this.label5);
+            this.gdCoordinates.Controls.Add(this.label4);
+            this.gdCoordinates.Location = new System.Drawing.Point(12, 177);
+            this.gdCoordinates.Name = "gdCoordinates";
+            this.gdCoordinates.Size = new System.Drawing.Size(284, 90);
+            this.gdCoordinates.TabIndex = 7;
+            this.gdCoordinates.TabStop = false;
+            this.gdCoordinates.Text = "Enter Coordinates";
             // 
             // txtYcoord
             // 
@@ -163,13 +163,13 @@ namespace DrwaRactangle
             this.txtheight.Size = new System.Drawing.Size(100, 20);
             this.txtheight.TabIndex = 3;
             // 
-            // txtwidht
+            // txtwidth
             // 
-            this.txtwidht.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtwidht.Location = new System.Drawing.Point(93, 33);
-            this.txtwidht.Name = "txtwidht";
-            this.txtwidht.Size = new System.Drawing.Size(100, 20);
-            this.txtwidht.TabIndex = 2;
+            this.txtwidth.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtwidth.Location = new System.Drawing.Point(93, 33);
+            this.txtwidth.Name = "txtwidth";
+            this.txtwidth.Size = new System.Drawing.Size(100, 20);
+            this.txtwidth.TabIndex = 2;
             // 
             // label2
             // 
@@ -196,8 +196,9 @@ namespace DrwaRactangle
             this.btnRanctangle.Name = "btnRanctangle";
             this.btnRanctangle.Size = new System.Drawing.Size(284, 23);
             this.btnRanctangle.TabIndex = 8;
-            this.btnRanctangle.Text = "Drow ractangle";
+            this.btnRanctangle.Text = "Draw ractangle";
             this.btnRanctangle.UseVisualStyleBackColor = false;
+            this.btnRanctangle.Click += new System.EventHandler(this.btnRanctangle_Click);
             // 
             // lblInfo
             // 
@@ -212,15 +213,15 @@ namespace DrwaRactangle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 413);
+            this.ClientSize = new System.Drawing.Size(326, 354);
             this.Controls.Add(this.gbRactangleForm);
             this.MaximizeBox = false;
             this.Name = "RactangleForm";
             this.Text = "RactangleForm";
             this.gbRactangleForm.ResumeLayout(false);
             this.gbRactangleForm.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gdCoordinates.ResumeLayout(false);
+            this.gdCoordinates.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -228,12 +229,12 @@ namespace DrwaRactangle
         #endregion
 
         private System.Windows.Forms.GroupBox gbRactangleForm;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gdCoordinates;
         private System.Windows.Forms.RadioButton rbPickOnScreen;
         private System.Windows.Forms.RadioButton rbCooordinates;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtheight;
-        private System.Windows.Forms.TextBox txtwidht;
+        private System.Windows.Forms.TextBox txtwidth;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtYcoord;
